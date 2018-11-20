@@ -1,0 +1,28 @@
+{
+  "name": "myreactblog",
+  "version": "1.0.0",
+  "description": "一个React写的博客",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --config config/webpack.config.js --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/genglang/myReactBlog.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/genglang/myReactBlog/issues"
+  },
+  "homepage": "https://github.com/genglang/myReactBlog#readme",
+  "dependencies": {
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "webpack": "^4.26.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "^3.1.2"
+  }
+}
