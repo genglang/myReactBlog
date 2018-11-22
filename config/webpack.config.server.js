@@ -8,7 +8,7 @@ module.exports={
 	output:{
 		filename: 'server-entry.js', // node端没有浏览器缓存的概念,并且需要在node中直接import
 		path:path.join(__dirname,'../dist'), // 打包好的输出路径
-		publicPath: '',
+		publicPath: './',
 		libraryTarget: 'commonjs2' // 打包出来的模块方案
 	},
 	module: {
