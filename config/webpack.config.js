@@ -1,4 +1,5 @@
 const path = require('path')
+const HTMLPlugin = require('html-webpack-plugin')
 module.exports={
 	entry:{
 		app:path.join(__dirname,'../src/app.js')
@@ -6,7 +7,7 @@ module.exports={
 	output:{
 		filename: '[name].[hash].js',
 		path:path.join(__dirname,'../dist'),
-		publicPath: '/public'
+		publicPath: './'
 	},
 	module: {
 		rules: [
@@ -18,5 +19,8 @@ module.exports={
 				]
 			}
 		]
-	}
+	},
+	plugins: [
+		new HTMLPlugin()
+	]
 }

@@ -4,7 +4,10 @@
   "description": "一个React写的博客",
   "main": "index.js",
   "scripts": {
-    "build": "webpack --config config/webpack.config.js --mode development",
+    "build:web": "webpack --config config/webpack.config.js --mode development",
+    "build:server": "webpack --config config/webpack.config.server.js --mode development",
+    "clear": "rimraf dist",
+    "build": "npm run clear && npm run build:web && npm run build:server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -26,6 +29,8 @@
     "@babel/preset-env": "^7.1.6",
     "@babel/preset-react": "^7.0.0",
     "babel-loader": "^8.0.4",
+    "html-webpack-plugin": "^3.2.0",
+    "rimraf": "^2.6.2",
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2"
   }
