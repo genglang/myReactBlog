@@ -4,12 +4,13 @@
   "description": "一个React写的博客",
   "main": "index.js",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.config.js --mode development",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config config/webpack.config.dev.js --mode development",
     "build:web": "webpack --config config/webpack.config.js --mode development",
     "build:server": "webpack --config config/webpack.config.server.js --mode development",
     "clear": "rimraf dist",
     "build": "npm run clear && npm run build:web && npm run build:server",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "server": "npm run build && node server/server",
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -33,6 +34,7 @@
     "babel-loader": "^8.0.4",
     "cross-env": "^5.2.0",
     "html-webpack-plugin": "^3.2.0",
+    "jest": "^23.6.0",
     "rimraf": "^2.6.2",
     "webpack": "^4.26.0",
     "webpack-cli": "^3.1.2",
