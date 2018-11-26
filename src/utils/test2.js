@@ -7,3 +7,9 @@ export function forEach(items, cb) {
         cb(items[index])
     }
 }
+
+export const bot={
+    sayHello(name){
+        console.log(`Hello${name}`)
+    }
+}
